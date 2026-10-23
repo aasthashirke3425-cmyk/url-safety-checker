@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>URL Sentinel | URL Safety Checker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background decoration -->
+    <div class="background-grid"></div>
+
+    <!-- Navigation -->
+    <header>
+
+        <div class="logo">
+            <span class="shield">🛡️</span>
+            URL <span>Sentinel</span>
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            Security Scanner Online
+        </div>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <div class="tag">
+                CYBERSECURITY TOOL
+            </div>
+
+            <h1>
+                Check a URL<br>
+                <span>before you click.</span>
+            </h1>
+
+            <p>
+                Analyze suspicious URL characteristics and
+                identify potential security risks.
+            </p>
+
+        </section>
+
+
+        <!-- Scanner -->
+        <section class="scanner-card">
+
+            <label for="urlInput">
+                Enter URL to analyze
+            </label>
+
+            <div class="input-container">
+
+                <input
+                    type="text"
+                    id="urlInput"
+                    placeholder="https://example.com/login"
+                    autocomplete="off"
+                >
+
+                <button id="scanButton">
+                    🔍 Scan URL
+                </button>
+
+            </div>
+
+            <p class="input-help">
+                Example:
+                https://example.com/login
+            </p>
+
+        </section>
+
+
+        <!-- Loading -->
+        <div id="loading" class="loading hidden">
+
+            <div class="spinner"></div>
+
+            <p>
+                Analyzing URL...
+            </p>
+
+        </div>
+
+
+        <!-- Result -->
+        <section id="resultSection" class="result-section hidden">
+
+            <div class="result-header">
+
+                <div>
+                    <p class="small-title">
+                        SECURITY ANALYSIS
+                    </p>
+
+                    <h2 id="resultTitle">
+                        URL Analysis
+                    </h2>
+                </div>
+
+                <div id="riskBadge"
+                     class="risk-badge">
+                </div>
+
+            </div>
+
+
+            <!-- Score -->
+            <div class="score-container">
+
+                <div class="score-circle">
+
+                    <span id="score">
+                        0
+                    </span>
+
+                    <small>
+                        /100
+                    </small>
+
+                </div>
+
+                <div class="score-description">
+
+                    <h3 id="riskLevel">
+                        Low Risk
+                    </h3>
+
+                    <p id="riskDescription">
+                        This URL does not show
+                        many suspicious characteristics.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- URL Display -->
+            <div class="analyzed-url">
+
+                <span>
+                    ANALYZED URL
+                </span>
+
+                <p id="analyzedUrl">
+                </p>
+
+            </div>
+
+
+            <!-- Checks -->
+            <div class="checks-section">
+
+                <h3>
+                    Security Checks
+                </h3>
+
+                <div id="checksList">
+                </div>
+
+            </div>
+
+
+            <!-- Recommendation -->
+            <div class="recommendation">
+
+                <span>💡</span>
+
+                <div>
+
+                    <strong>
+                        Recommendation
+                    </strong>
+
+                    <p id="recommendationText">
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Actions -->
+            <div class="result-actions">
+
+                <button id="copyButton"
+                        class="secondary-button">
+                    📋 Copy Result
+                </button>
+
+                <button id="newScanButton"
+                        class="secondary-button">
+                    🔄 New Scan
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- History -->
+        <section class="history-section">
+
+            <div class="history-header">
+
+                <div>
+
+                    <p class="small-title">
+                        ACTIVITY
+                    </p>
+
+                    <h2>
+                        Scan History
+                    </h2>
+
+                </div>
+
+                <button id="clearHistory">
+                    Clear History
+                </button>
+
+            </div>
+
+            <div id="historyList"
+                 class="history-list">
+
+                <p class="empty-history">
+                    No URLs scanned yet.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Disclaimer -->
+        <section class="disclaimer">
+
+            <strong>
+                ⚠ Important
+            </strong>
+
+            <p>
+                URL Sentinel performs a heuristic analysis based
+                on URL characteristics. It does not guarantee
+                that a website is completely safe or malicious.
+                Always verify the source before entering
+                sensitive information.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            URL Sentinel © 2026
+        </p>
+
+        <p>
+            Client-side cybersecurity project
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
